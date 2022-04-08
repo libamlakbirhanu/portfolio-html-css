@@ -1,0 +1,65 @@
+// header
+.header-content {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	height: 100%;
+
+	.left-header {
+		display: flex;
+		align-items: center;
+		position: relative;
+
+		.h-shape {
+			transition: $transition;
+			width: 65%;
+			height: 100%;
+			background-color: $color-secondary;
+			position: absolute;
+			left: 0;
+			top: 0;
+			clip-path: polygon(0 0, 46% 0, 83% 100%, 0% 100%);
+		}
+		.image {
+			border-radius: $br-sm-2;
+			height: 90%;
+			width: 68%;
+			margin-left: 4rem;
+			transition: $transition;
+			box-shadow: $box-shadow-1;
+			z-index: 1;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				transition: $transition;
+				padding: 2rem;
+				filter: grayscale(50%);
+
+				&:hover {
+					filter: grayscale(25%);
+				}
+			}
+		}
+	}
+
+	.right-header {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding-right: 18rem;
+
+		.name {
+			font-size: 3rem;
+
+			span {
+				color: $color-secondary;
+			}
+		}
+
+		p {
+			margin: 1.5rem 0;
+			line-height: 2rem;
+		}
+	}
+}
